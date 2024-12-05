@@ -29,28 +29,108 @@ end;local ChackQ = function()
         }
     elseif Lv.Value >= 15 and Lv.Value <= 29 then
         return {
-            ["Mon"] = 'Gorilla'
-            ["NumQ"] = 'JungleQuest'
+            ["Mon"] = 'Gorilla',
+            ["NumQ"] = 'JungleQuest',
             ["NameQ"] = 2,
-            ["CframeQ"] = Cframe.new(-1599.8194580078125, 36.852149963378906, 153.0706024169922)
-            ["CframeMon"] = CFrame.new(-1443.7662353515625, 61.851966857910156, -47.555946350097656)
-        }
+            ["CFrameQ"] = CFrame.new(-1590.45667, 40.678989, 232.14567, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+            ["CFrameMon"] = CFrame.new(-1196.23456, 25.678954, 315.7854, 0.342042685, 0, 0.939684391, 0, 1, 0, -0.939684391, 0, 0.342042685)
+    }
     elseif Lv.Value >= 30 and Lv.Value <= 39 then
         return {
-            ["Mon"] = 'Pirate'
-            ["NumQ"] = 'BuggyQuest1'
+            ["Mon"] = 'Pirate',
+            ["NumQ"] = 'PirateQuest',
             ["NameQ"] = 1,
-            ["CframeQ"] = CFrame.new(-1139.5631103515625, 4.75205135345459, 3830.38671875)
-            ["CframeMon"] = CFrame.new(-1045.943115234375, 64.41950225830078, 3930.302001953125)
-        }
-    end
-end;
+            ["CFrameQ"] = CFrame.new(2058.2345, 20.1457, 1450.6789, 0.9397, -0, -0.3419, 0, 1, -0, 0.3419, 0, 0.9397),
+            ["CFrameMon"] = CFrame.new(2167.5678, 15.6789, 1615.786, -0.3090, 0, 0.9510, 0, 1, 0, -0.9510, 0, -0.3090)
+    }
+        elseif Lv.Value >= 40 and Lv.Value <= 59 then
+        return {
+            ["Mon"] = 'Brute',
+            ["NumQ"] = 'BruteQuest',
+            ["NameQ"] = 2,
+            ["CFrameQ"] = CFrame.new(3000.4567, 50.6789, 1200.2345, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+            ["CFrameMon"] = CFrame.new(3150.7891, 45.5678, 1280.6789, 0.3420, -0.0003, 0.9396, 0.0001, 1, 0.0002, -0.9396, 0, 0.3420)
+}
+            elseif level >= 60 and level <= 99 then
+                config = {
+                    monster = "Brute",
+                    questName = "PirateQuest",
+                    questLevel = 2,
+                    questPosition = CFrame.new(-1140.55, 4.39, 3823.37),
+                    monsterPosition = CFrame.new(-1180.77, 4.39, 3942.01)
+                }
+            elseif level >= 100 and level <= 174 then
+                config = {
+                    monster = "Desert Bandit",
+                    questName = "DesertQuest",
+                    questLevel = 1,
+                    questPosition = CFrame.new(896.71, 6.44, 4390.72),
+                    monsterPosition = CFrame.new(935.97, 6.44, 4373.19)
+                }
+            elseif level >= 175 and level <= 249 then
+                config = {
+                    monster = "Fishman Warrior",
+                    questName = "FishmanQuest",
+                    questLevel = 1,
+                    questPosition = CFrame.new(61122, 18, 1567),
+                    monsterPosition = CFrame.new(61035, 18, 1467)
+                }
+            elseif level >= 250 and level <= 299 then
+                config = {
+                    monster = "Fishman Commando",
+                    questName = "FishmanQuest",
+                    questLevel = 2,
+                    questPosition = CFrame.new(61122, 18, 1567),
+                    monsterPosition = CFrame.new(61800, 18, 1600)
+                }
+            elseif level >= 300 and level <= 374 then
+                config = {
+                    monster = "Sky Bandit",
+                    questName = "SkyQuest",
+                    questLevel = 1,
+                    questPosition = CFrame.new(-4835.71, 717.67, -2620.18),
+                    monsterPosition = CFrame.new(-4955.59, 717.67, -2705.08)
+                }
+            elseif level >= 375 and level <= 449 then
+                config = {
+                    monster = "Dark Master",
+                    questName = "SkyQuest",
+                    questLevel = 2,
+                    questPosition = CFrame.new(-4835.71, 717.67, -2620.18),
+                    monsterPosition = CFrame.new(-5235.56, 432.85, -2195.83)
+                }
+            elseif level >= 450 and level <= 524 then
+                config = {
+                    monster = "Toga Warrior",
+                    questName = "ColosseumQuest",
+                    questLevel = 1,
+                    questPosition = CFrame.new(-1770.35, 7.29, -2987.83),
+                    monsterPosition = CFrame.new(-1870.56, 7.29, -3047.14)
+                }
+            elseif level >= 525 and level <= 624 then
+                config = {
+                    monster = "Royal Soldier",
+                    questName = "ColosseumQuest",
+                    questLevel = 2,
+                    questPosition = CFrame.new(-1770.35, 7.29, -2987.83),
+                    monsterPosition = CFrame.new(-2350.27, 7.29, -2955.44)
+                }
+            elseif level >= 625 and level <= 700 then
+                config = {
+                    monster = "Galley Pirate",
+                    questName = "GalleyQuest",
+                    questLevel = 1,
+                    questPosition = CFrame.new(-5498.74, 8.29, 840.85),
+                    monsterPosition = CFrame.new(-5508.43, 8.29, 1085.29)
+                }
+            end
+        end;
 local TW = function(...)
     local CFrame = {...}
     pcall(function()
         if not _G.StopTween then
             local Distance = (CFrame[1].Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-            Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/20, Enum.EasingStyle.Cubic),{CFrame = CFrame[1]})
+            Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/50, Enum.EasingStyle.Cubic),{CFrame = CFrame[1]})
             if _G.StopTween then Tween:Cancel()
             elseif game.Players.LocalPlayer.Character.Humanoid.Health > 0 then Tween:Play() end
             if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("panupong") then
