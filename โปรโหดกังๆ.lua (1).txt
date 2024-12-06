@@ -63,7 +63,7 @@ end;local ChackQ = function()
     elseif Lv.Value >= 30 and Lv.Value <= 39 then
         return {
             ["Mon"] = 'Pirate',
-            ["NumQ"] = 'PirateQuest',
+            ["NumQ"] = 'BruteQuest1',
             ["NameQ"] = 1,
             ["CFrameQ"] = CFrame.new(2058.2345, 20.1457, 1450.6789, 0.9397, -0, -0.3419, 0, 1, -0, 0.3419, 0, 0.9397),
             ["CFrameMon"] = CFrame.new(2167.5678, 15.6789, 1615.786, -0.3090, 0, 0.9510, 0, 1, 0, -0.9510, 0, -0.3090)
@@ -71,15 +71,15 @@ end;local ChackQ = function()
         elseif Lv.Value >= 40 and Lv.Value <= 59 then
         return {
             ["Mon"] = 'Brute',
-            ["NumQ"] = 'BruteQuest',
+            ["NumQ"] = 'BruteQuest1',
             ["NameQ"] = 2,
-            ["CFrameQ"] = CFrame.new(3000.4567, 50.6789, 1200.2345, 0, 0, 1, 0, 1, -0, -1, 0, 0),
-            ["CFrameMon"] = CFrame.new(3150.7891, 45.5678, 1280.6789, 0.3420, -0.0003, 0.9396, 0.0001, 1, 0.0002, -0.9396, 0, 0.3420)
+            ["CFrameQ"] = CFrame.new(2058.2345, 20.1457, 1450.6789, 0.9397, -0, -0.3419, 0, 1, -0, 0.3419, 0, 0.9397),
+            ["CFrameMon"] = CFrame.new((-979.719055, 14.6441231, 4234.74023, 0.651806355, -0.00396216381, 0.758375049, -0.00985094905, 0.999857783, 0.0136904633, -0.758321404, -0.0163942426, 0.65167462)
 }
             elseif level >= 60 and level <= 99 then
                 config = {
                     monster = "Brute",
-                    questName = "PirateQuest",
+                    questName = "PirateQuest',
                     questLevel = 2,
                     questPosition = CFrame.new(-1140.55, 4.39, 3823.37),
                     monsterPosition = CFrame.new(-1180.77, 4.39, 3942.01)
